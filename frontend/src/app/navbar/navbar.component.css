@@ -1,0 +1,6 @@
+#intro {
+  width: 170px;
+  height: 70px;
+  position: relative;
+  background: url("src/assets/img/logo4.png") no-repeat center center;
+}

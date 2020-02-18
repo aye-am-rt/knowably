@@ -1,0 +1,60 @@
+header {
+    text-align: center;
+}
+header h2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+header h2:hover {
+    cursor: pointer;
+}
+#tble {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+table {
+    width: 100%;
+}
+.wrapper {
+    background: url("src/assets/searchjs/img/search-background.jpg") no-repeat center center;
+    position: absolute;
+    padding-top: 100px;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    overflow: hidden;
+    width: 100%;
+    min-height: 100%;
+  }
+.foot{
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;}
+td, th {
+    font-family: 'Roboto', sans-serif;
+    text-shadow: none;
+}
+.mat-header-cell, .mat-cell {
+    text-align: center;
+}
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+#buttons {
+    text-align: center;
+}
+.mat-raised-button {
+    margin-top: 2rem;
+}
+.mat-cell .mat-raised-button:first-child {
+    margin-right: .5rem;
+    margin-top: auto;
+}
+.mat-cell .mat-raised-button {
+    margin: auto;
+}

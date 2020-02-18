@@ -1,0 +1,45 @@
+header {
+    text-align: center;
+}
+header h2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+header h2:hover {
+    cursor: pointer;
+}
+a h2 {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+a h2:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+mat-card {
+    width: 31.33%;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    float: left;
+}
+.wrapper {
+  background: url("src/assets/searchjs/img/search-background.jpg") no-repeat center center;
+  position: relative;
+  padding-top: 100px;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  overflow: hidden;
+  width: 100%;
+  min-height: 100%;
+  }
+
+#butn {
+    text-align: center;
+}
+.mat-raised-button {
+    margin-top: 2rem;
+}
+.mat-raised-button:first-of-type {
+    margin-right: 4rem;
+}

@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+<br><br><br>
+<form #expert_input="ngForm" (ngSubmit)= inputData(expert_input.value)>
+	<div class="main-w3layouts wrapper">
+		<div class="main-agileinfo">
+			<div class="agileits-top">
+				<p style="font-size: 30px; line-height: 1em; font-family: cursive;">Welcome</p>
+				<p style="font-size: 30px; line-height: 0%;">{{userId}}</p>
+					<input class="text domain" type="text" name="domain" placeholder="Domain" required="" required ngModel>
+					<input class="text" type="text" name="concept" placeholder="Concept" required="" ngModel>
+<!--					<label for="file-upload" class="custom-file-upload">Upload File</label>-->
+          <input type="file" name="files" style="padding-top: 5px; align-content: center"
+                     #uploads  (change)="onChange(uploads.files)"  multiple
+                     value="process">
+					<!-- <input type="submit" value="SIGNUP"> -->
+					<button type="submit" class="button" style="font-weight: bold; font-size: larger" >Submit</button>
+          <button type="submit" class="button" style="font-weight: bold; font-size: larger" routerLink="/expert-analytics">Result Analytics</button>
+        <div *ngIf = "dataFlag" class="spin">
+          <mat-spinner style="margin: auto;"></mat-spinner>
+        </div>
+			</div>
+		</div>
+		</div>
+</form>
+<div class="wrapper" id="lowdiv">
+
+</div>
+<app-footer></app-footer>

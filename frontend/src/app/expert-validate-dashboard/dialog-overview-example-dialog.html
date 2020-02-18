@@ -1,0 +1,36 @@
+
+
+<form #expertdata="ngForm" class="form-style-4" (ngSubmit)="onClickSubmit(expertdata.value)">
+  <div *ngFor="let x of data">
+    <label style="color: black" class="text-capitalize">{{x.key}}
+      <input class="form-control" style="color:black" name="{{x.key | uppercase}}" value="{{x.value}}" [readonly]="x.type=='result'?editable:!editable" [ngModel]="x.type=='result'?required:x.value" required>
+      <ng-template [ngIf]="x.type=='result'">
+
+<fieldset class="form-group">
+ 
+    <div class="form-check">
+    <label style="color: black" class="form-check-label">
+    <input class="form-check-input" type="radio" name="status{{x.key}}" ngModel required id="legendRadio1" value="add">
+    add
+    </label>
+    </div>
+    <div class="form-check">
+    <label style="color: black"  class="form-check-label">
+    <input class="form-check-input" type="radio" name="status{{x.key}}" ngModel required id="legendRadio2" value="delete" checked>
+    delete
+    </label>
+    </div>
+    </fieldset>
+      <!-- <select class="form-control" name="status{{x.key}}" ngModel required>
+        <option class="form-control" style="color: black">add</option>
+        <option class="form-control" style="color: black">delete</option>
+      </select> -->
+    </ng-template>
+
+    </label>
+    <br />
+  </div>
+  <input type="submit" class="btn btn-primary mr-3" mat-raised-button color="primary"  value="submit" />
+  <input style="width: 80px" type="close" class="btn btn-primary" mat-raised-button color="primary" value="close" (click)="onNoClick()"/>
+</form>
+

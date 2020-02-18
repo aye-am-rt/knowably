@@ -1,0 +1,69 @@
+
+.intro-content {
+  background: rgba(49, 44, 44, 0.4);
+  position: absolute;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 15px;
+}
+
+.intro-content  h2 {
+  color: #fff;
+  margin-bottom: 30px;
+  font-size: 64px;
+  font-weight: 700;
+  /* display: inline;
+  background-color: rgba(49, 44, 44, 0.4); */
+  font-family: 'Inconsolata', monospace;
+}
+
+.intro-content  h3 {
+  color: #fff;
+  margin-bottom: 30px;
+  font-size: 26px;
+  font-weight: 500;
+}
+.btn-get-started {
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 32px;
+  border-radius: 2px;
+  transition: 0.5s;
+  margin: 10px;
+  color: #fff;
+  text-decoration: none;
+  background: #a0a3a7;
+}
+
+.btn-get-started:hover {
+  color: #fff;
+  background: #616263;
+}
+
+@media (max-width: 767px) {
+  #intro {
+    height: 100vh;
+  }
+  .intro-content  h2 {
+    font-size: 34px;
+  }
+}
+
+#intro {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  background-image: url("src/assets/img/ge.jpg") ;
+  background-size: cover;
+}

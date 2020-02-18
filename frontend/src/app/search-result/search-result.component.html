@@ -1,0 +1,65 @@
+<app-navbar></app-navbar>
+<br><br><br>
+<div class="wrapper" style="padding-top: 20px;">
+  <div class="container">
+  <div class="row">
+    <div class="col-sm-2"></div>
+        <div class='col-sm-8 card' style="background-color: black; margin-top: 20px;">
+                      <div *ngIf ="goBackFlag else other">
+                        <button class="btn btn-success" style=" color: black; font-size: 20px; margin-right: auto; margin-left: auto; margin-top: 10px;" routerLink="/medical-domain">Make another Search</button>
+                      </div>
+                      <ng-template #other>
+                        <button class="btn btn-success" style=" color: black; font-size: 20px; margin-right: auto; margin-left: auto; margin-top: 10px;" routerLink="/movie-domain">Make another Search</button>
+                      </ng-template>
+                        <div class="card-body">
+                        <h3 style="color: limegreen">{{query }}</h3>
+                          <hr style="background-color: limegreen">
+                        <span *ngIf = "flag" >
+                                <div *ngFor = "let not of result; index as i">
+                                        <p style="line-height: 10px; color: white; cursor: pointer"> {{not}}</p>
+                                </div>
+                        </span>
+                        <div aria-label="Basic example" style="float: right;" *ngIf="flag">
+                                <div  *ngIf="likeFlag && reportFlag && resultFlag">
+                                      <button class="btn btn-success"  (click)= "userLike(query, result)" style=" color: black; font-size: 20px; margin-right: 10px;">Like</button>
+                                      <button class="btn btn-success" (click)= "userReport(query, result)" style="color: black; font-size: 20px; ">Report</button>
+                                </div>
+                                <div class="row" *ngIf="likeFlag==false">
+                                        <button class="btn btn-danger" style="color: black; margin-right: 10px;font-size: 20px;">Liked</button>
+                                </div>
+                                <div class="row" *ngIf="reportFlag==false">
+                                        <button class="btn btn-danger" style="color: black; margin-right: 10px;font-size: 20px;">Reported</button>
+                                </div>
+                                <br>
+                        </div>
+                        <br>
+                        </div>
+                </div>
+  </div>
+                <hr>
+  <div class="row" style="margin-top: -30px; padding-bottom: 30px;">
+    <div class="col-sm-2"></div>
+    <div class="list col-sm-8 card" style="background-color: black; " *ngIf="flag && resultFlag && suggestionFlag">
+          <div class="card-body">
+            <h2 style="color: limegreen">People also searched for...</h2>
+            <hr style="background-color: limegreen">
+            <div  *ngFor="let sug of suggestion">
+              <a (click)= "suggestionSearch(sug)" style="background-color: grey">
+                <p style="line-height: 10px; color: white; cursor: pointer"> {{sug}}</p>
+              </a>
+            </div>
+          </div>
+        </div>
+  </div>
+  </div>
+  <app-footer></app-footer>
+
+
+<!--<mat-nav-list>-->
+<!--  <mat-list-item *ngFor="let link of links">-->
+<!--    <a matLine href="...">{{ link }}</a>-->
+<!--    <button mat-icon-button (click)="showInfo(link)">-->
+<!--      <mat-icon>info</mat-icon>-->
+<!--    </button>-->
+<!--  </mat-list-item>-->
+<!--</mat-nav-list>-->

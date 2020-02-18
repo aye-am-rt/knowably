@@ -1,0 +1,16 @@
+<app-navbar></app-navbar>
+<br><br><br>
+<form #login="ngForm" (ngSubmit)= loginExpert(login.value)>
+<div class="main-w3layouts wrapper">
+		<div class="main-agileinfo">
+			<div class="agileits-top">
+        <h4 *ngIf="flag" style="text-align: center; color: red">Invalid Credentials</h4>
+					<input class="text email" type="email" name="name" placeholder="Email" required="" ngModel>
+					<input class="text" type="password" name="password" placeholder="Password" required="" ngModel>
+					<button type="submit" class="button btn-success " style="font-size: larger; font-weight: bold" >Login</button>
+			</div>
+		</div>
+	</div>
+
+</form>
+<app-footer></app-footer>

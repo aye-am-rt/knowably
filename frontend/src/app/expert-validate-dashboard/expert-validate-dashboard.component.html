@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<app-navbar></app-navbar>
+<br><br><br>
+<div class="jumbotron" style="text-align: center">
+  <div class="card text-white bg mb-3" style="width: 23rem;;display: inline-block;">
+    <div class="card-header" style="color: limegreen">Data to be validated</div>
+    <div class="card-body">
+      <div id="clear" *ngIf="collapsed" style="text-align: left">
+        <div *ngFor="let domaindata of domaindata">
+          <p class="card-text"><span class="text-uppercase" style="color:limegreen">{{domaindata.key}}
+            </span></p>
+            <div *ngFor="let y of domaindata.value">
+              <ul>
+                <li style="color: whitesmoke">{{y}}</li>
+              </ul>
+            </div>
+        </div>
+      </div>
+      <button class="btn btn-success mr-3 text-capitalize" mat-raised-button (click)="openDialog()"><i class="fas fa-edit"></i><span> edit</span></button>
+
+      <button class="btn btn-success text-capitalize" mat-raised-button (click)="clearAll()"><i class="fas fa-chevron-left"></i> <span> back</span></button>
+    </div>
+  </div>
+  <div *ngIf="flag1==true" class="container-fluid" style="background-color: yellow; z-index: 2;">
+  <h2 style="color:red" >Successful</h2>
+  </div>
+</div>
+<div *ngIf = "flag" class="spin">
+       <mat-spinner style="margin: auto;"></mat-spinner>
+</div>

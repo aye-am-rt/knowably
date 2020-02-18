@@ -1,0 +1,56 @@
+#tble {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+table {
+    width: 100%;
+}
+.wrapper {
+  background: url("src/assets/searchjs/img/search-background.jpg") no-repeat center center;
+  position: absolute;
+  padding-top: 100px;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  overflow: hidden;
+  width: 100%;
+  min-height: 100%;
+  }
+
+
+td, th {
+    font-family: 'Roboto', sans-serif;
+    text-shadow: none;
+}
+.foot{
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
+}
+.mat-header-cell, .mat-cell {
+    text-align: center;
+}
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+#buttons {
+    text-align: center;
+    width: 100%;
+}
+.mat-raised-button {
+    min-width: 150px;
+    margin-right: 3.5rem;
+    margin-top: 2rem;
+}
+.mat-cell .mat-raised-button:first-child {
+    margin-right: 0.5rem;
+    margin-top: auto;
+}
+.mat-cell .mat-raised-button {
+    margin: auto;
+}
